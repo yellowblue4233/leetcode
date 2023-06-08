@@ -14,18 +14,19 @@
 # 输入：l1 = [], l2 = [0]
 # 输出：[0]
 
+from typing import Optional
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 ## 思路1：迭代方法
 ## 为了可以在统一在循环中使用 p.next，先创建一个首节点answer，而answer.next就是要返回的结果节点，
 ## 不用answer而是用p来遍历，是为了保留answer和answer.next节点，不像list1和list2随着遍历而移动
 ## 注意：list1和list2代表链表的首节点，求链表长度需要遍历链表，编码时要考虑链表状态会如何改变
 
-from typing import Optional, ListNode
-
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         if list1 is None:
@@ -54,11 +55,6 @@ class Solution:
 ## 每次递归就只确定一个节点，递归完成后就可以确定全部节点的顺序，
 ## 速度比迭代方法慢，递归所需的内存空间也比较大，但递归代码很简洁
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         if list1 is None:
