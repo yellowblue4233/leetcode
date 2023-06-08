@@ -20,6 +20,7 @@
 ## 思路
 ## 1. 用Hashmap查找比较省时间，不用循环两遍
 ## 2. 作减法来查找需要的另一个数
+## 注意：在Python中，Hashmap用字典实现
 
 from typing import List
 
