@@ -10,18 +10,19 @@
 # 输入：head = [1,1,2,3,3]
 # 输出：[1,2,3]
 
+from typing import Optional
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+        
 ## 思路1：迭代方法
 ## 该题需要确保当前节点和下个节点不为空，判断当前节点的数值和下个节点的数值是否相同，
 ## 是则跳过下个节点，next指向下下个节点，否则不处理，轮到下个节点进行判断
 ## 注意：处理链表需要考虑空链表和单节点链表的特殊情况
 
-from typing import Optional, ListNode
-
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head is None or head.next is None:
@@ -39,11 +40,6 @@ class Solution:
 ## 相当于倒序处理，从后面的最小链表开始处理
 ## 虽然递归方法代码简洁，但较难理解
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head is None or head.next is None:
