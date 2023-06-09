@@ -59,7 +59,7 @@ class Solution:
         (head.next).next = head    ## 真正的链表反转操作，修改下个节点的next指向
         head.next = None    ## 确保反转后的链表最后节点为None，即保证链表无环
         return ptr
-    
+
 ## 思路3：Hashmap
 ## （用Hashmap较简单）
 class Solution:
