@@ -59,3 +59,20 @@ class Solution:
         (head.next).next = head    ## 真正的链表反转操作，修改下个节点的next指向
         head.next = None    ## 确保反转后的链表最后节点为None，即保证链表无环
         return ptr
+    
+## 思路3：Hashmap
+## （用Hashmap较简单）
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        hashmap = {0:None, 1:head}    ## 因为后续保存的是head.next，所以先把head存入
+        key = 1                       ## 为了在第二个循环中将None加入反转链表，把None存入
+        while head.next:    ## 判断head.next，确保循环结束后的head不是None
+            key = key + 1    ## 在循环中先执行key+1，确保key与hashmap中最后的键相同
+            hashmap[key] = head.next    ## 保存head.next而不是head，确保循环结束后的head不是None
+            head = head.next
+        while key:
+            hashmap[key].next = hashmap[key - 1]    ## 当key=1时，将反转链表的尾节点next指向None
+            key = key - 1
+        return head
