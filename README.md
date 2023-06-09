@@ -1,1 +1,13 @@
 # leetcode
+- [70. 爬楼梯](climbStairs.py)
+- [斐波那契数列](Fibonacci.py)
+- [1. 两数之和](twoSum.py)
+- [88. 合并两个有序数组](merge.py)
+- [283.移动零]()
+- [448. 找到所有数组中消失的数字](findDisappearedNumbers.py)
+- [21. 合并两个有序链表](mergeTwoLists.py)
+- [83. 删除排序链表中的重复元素](deleteDuplicates.py)
+- [141. 环形链表](hasCycle.py)
+- [142. 环形链表 II](detectCycle.py)
+- [160. 相交链表](getIntersectionNode.py)
+- [206. 反转链表](reverseList.py)
